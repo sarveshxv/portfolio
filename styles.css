@@ -1,9 +1,9 @@
-:root{
+:root {
     --bg: #162f2c;
     --fg: #fff;
-    
     font-family: "Century Gothic";
 }
+
 body, html {
     margin: 0;
     padding: 0;
@@ -12,8 +12,7 @@ body, html {
     font-family: "Century Gothic";
 }
 
-/* premade-CLASSES */
-.text-white{
+.text-white {
     color: var(--fg);
 }
 
@@ -27,59 +26,71 @@ body, html {
     font-size: 2em;
     color: white;
     text-align: center;
+    position: relative;
+    overflow: hidden; /* Ensure no overflow */
 }
 
-#section1 {
-    background: url('static/bg-pexels-kristaps-ungurs-1831590-20830386.jpg') no-repeat center center fixed;
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-size: cover;
-
-    padding: 180px 0 100px 0;
+    background-position: center;
+    background-attachment: fixed;
+    z-index: -1; /* Ensure the background is behind the content */
 }
 
-#section2 {
-    background: url('static/win11.jpg') no-repeat center center fixed;
-    background-size: cover;
+#section1 .background-image {
+    background-image: url('static/20240806_225956.jpg');
 }
 
-#section3 {
-    background: url('static/pexels-invisiblepower-1076885.jpg') no-repeat center center fixed;
-    background-size: cover;
+#section2 .background-image {
+    background-image: url('static/20240806_230537.jpg');
 }
 
-#section4 {
-    background: url('static/win11.jpg') no-repeat center center fixed;
-    background-size: cover;
+#section3 .background-image {
+    background-image: url('static/20240806_230358.jpg');
 }
 
+#section4 .background-image {
+    background-image: url('static/20240806_230638.jpg');
+}
 
 .navbar-brand {
     color: #fff;
 }
 
-/* ITEMS */
-
-/* NAV OFFCANVAS */
-.offcanvas{
+.offcanvas {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-
 }
 
-/* CARD */
-
-.card{
-    width: 18rem;
-    align-items: right;
-
-    margin: 25px 0;
-
+.card {
+    width: 80%; /* Adjusted width to 80% */
+    max-width: 600px;
+    margin: 25px auto;
+    padding: 25px 0;
     border-radius: 10px;
     background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative; /* Ensure the card is positioned relative to its container */
+    z-index: 1; /* Ensure the card is above the background image */
+}
+.head-card{
+    margin-top: 30vh;
 }
 
-/* HEADING 1 */
+.card-body {
+    padding: 20px;
+}
+
+.container {
+    position: relative; /* Ensure the container is positioned relative to its section */
+    z-index: 1; /* Ensure the container is above the background image */
+}
