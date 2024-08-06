@@ -1,0 +1,85 @@
+:root{
+    --bg: #162f2c;
+    --fg: #fff;
+    
+    font-family: "Century Gothic";
+}
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+    font-family: "Century Gothic";
+}
+
+/* premade-CLASSES */
+.text-white{
+    color: var(--fg);
+}
+
+.section {
+    min-height: 100vh;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    color: white;
+    text-align: center;
+}
+
+#section1 {
+    background: url('static/bg-pexels-kristaps-ungurs-1831590-20830386.jpg') no-repeat center center fixed;
+    background-size: cover;
+
+    padding: 180px 0 100px 0;
+}
+
+#section2 {
+    background: url('static/win11.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+#section3 {
+    background: url('static/pexels-invisiblepower-1076885.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+#section4 {
+    background: url('static/win11.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+
+.navbar-brand {
+    color: #fff;
+}
+
+/* ITEMS */
+
+/* NAV OFFCANVAS */
+.offcanvas{
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+}
+
+/* CARD */
+
+.card{
+    width: 18rem;
+    align-items: right;
+
+    margin: 25px 0;
+
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* HEADING 1 */
