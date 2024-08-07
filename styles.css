@@ -1,6 +1,7 @@
 :root {
     --bg: #162f2c;
     --fg: #fff;
+    --link: #ffffffaa;
     font-family: "Century Gothic";
 }
 
@@ -15,6 +16,64 @@ body, html {
 .text-white {
     color: var(--fg);
 }
+
+/* BOTTONS */
+.btn{
+    color: var(--fg)
+}
+
+/* MORE */
+.more-btn{
+    background: none;
+    border: none;
+    border-bottom: 1px solid var(--fg);
+    color: var(--fg);
+    font-size: 1rem;
+    padding: 0;
+}
+.more-btn-withoutunderline {
+    border-bottom: none;
+
+}
+.more-btn-secondary{
+    background: none;
+    border: none;
+    border-bottom: 1px solid var(--fg);
+    color: var(--link);
+    font-size: 1rem;
+    padding: 0;
+}
+.more-collapse {
+    margin-top: 8px;
+}
+
+.more-p {
+    /* border-bottom: 1px solid var(--fg); */
+}
+.more-expanded-divider {
+    border-bottom: 1px solid var(--fg);
+}
+.details-redir {
+    margin: 2rem 0;
+    color: var(--link);
+    text-decoration: none;
+}
+
+.divider-bottom {
+    border-bottom: 1px solid var(--fg);
+    line-height: 150%;
+    padding: 10px 0;
+}
+.divider-bottom-last{
+    line-height: 150%;
+    padding: 10px 0;
+}   
+.certs h6 {
+
+    margin-bottom: 20px;
+}
+  
+/* ICONS */
 
 .section {
     min-height: 100vh;
@@ -45,17 +104,42 @@ body, html {
 #section1 .background-image {
     background-image: url('static/20240806_225956.jpg');
 }
+#section1 {
+    padding: 30vh 0 20vh 0;
+}
 
 #section2 .background-image {
     background-image: url('static/20240806_230537.jpg');
 }
 
 #section3 .background-image {
-    background-image: url('static/20240806_230358.jpg');
+    background-image: url('static/20240806_225956.jpg');
+}
+#section3 {
+    padding: 20vh 0 ;
 }
 
 #section4 .background-image {
     background-image: url('static/20240806_230638.jpg');
+}
+
+
+/* OFF CANVAS NAV  */
+.navbar-toggler {
+    border: none;
+}
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+.btn-close:focus {
+    box-shadow: none;
+}
+.navbar-toggler-icon {
+    background-image: none;
+}
+.navbar-toggler .bi-three-dots {
+    font-size: 24px;
+    color: #333;
 }
 
 .navbar-brand {
@@ -82,9 +166,6 @@ body, html {
     position: relative; /* Ensure the card is positioned relative to its container */
     z-index: 1; /* Ensure the card is above the background image */
 }
-.head-card{
-    margin-top: 30vh;
-}
 
 .card-body {
     padding: 20px;
@@ -93,4 +174,7 @@ body, html {
 .container {
     position: relative; /* Ensure the container is positioned relative to its section */
     z-index: 1; /* Ensure the container is above the background image */
+}
+.list-group{
+    background: none;
 }
