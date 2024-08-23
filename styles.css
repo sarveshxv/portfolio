@@ -9,124 +9,43 @@ body, html {
     margin: 0;
     padding: 0;
     height: 100%;
-    overflow-x: hidden;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
     font-family: "Century Gothic";
 }
 
-.text-white {
-    color: var(--fg);
+.section {
+    min-height: 100vh;
+    height: auto;
+    width: 100vw;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Fix the background image */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 2em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
+#section1 { background-image: url('static/boats.jpg'); }
+#section2 { background-image: url('static/laptop.jpg'); }
+#section3 { background-image: url('image3.jpg'); }
+#section4 { background-image: url('image4.jpg'); }
+#section5 { background-image: url('image5.jpg'); }
 
 /* BOTTONS */
 .btn{
     color: var(--fg)
 }
 
-/* MORE */
-.more-btn{
-    background: none;
-    border: none;
-    border-bottom: 1px solid var(--fg);
-    color: var(--fg);
-    font-size: 1rem;
-    padding: 0;
-}
-.more-btn-withoutunderline {
-    border-bottom: none;
-
-}
-.more-btn-secondary{
-    background: none;
-    border: none;
-    border-bottom: 1px solid var(--fg);
-    color: var(--link);
-    font-size: 1rem;
-    padding: 0;
-}
-.more-collapse {
-    margin-top: 8px;
-}
-
-.more-p {
-    /* border-bottom: 1px solid var(--fg); */
-}
-.more-expanded-divider {
-    border-bottom: 1px solid var(--fg);
-}
-.details-redir {
-    margin: 2rem 0;
-    color: var(--link);
-    text-decoration: none;
-}
-
-.divider-bottom {
-    border-bottom: 1px solid var(--fg);
-    line-height: 150%;
-    padding: 10px 0;
-}
-.divider-bottom-last{
-    line-height: 150%;
-    padding: 10px 0;
-}   
-.certs h6 {
-
-    margin-bottom: 20px;
-}
-  
-/* ICONS */
-
-.section {
-    min-height: 100vh;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 2em;
-    color: white;
-    text-align: center;
-    position: relative;
-    overflow: hidden; /* Ensure no overflow */
-}
-
-.background-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    z-index: -1; /* Ensure the background is behind the content */
-}
-
-#section1 .background-image {
-    background-image: url('static/20240806_225956.jpg');
-}
-#section1 {
-    padding: 30vh 0 20vh 0;
-}
-
-#section2 .background-image {
-    background-image: url('static/20240806_230537.jpg');
-}
-
-#section3 .background-image {
-    background-image: url('static/20240806_225956.jpg');
-}
-#section3 {
-    padding: 20vh 0 ;
-}
-
-#section4 .background-image {
-    background-image: url('static/20240806_230638.jpg');
-}
-
 
 /* OFF CANVAS NAV  */
 .navbar-toggler {
     border: none;
+}
+.navbar-dark .navbar-toggler-icon {
+    background-image: none;
 }
 .navbar-toggler:focus {
     box-shadow: none;
@@ -153,6 +72,7 @@ body, html {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* CARD */
 .card {
     width: 80%; /* Adjusted width to 80% */
     max-width: 600px;
@@ -165,16 +85,4 @@ body, html {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     position: relative; /* Ensure the card is positioned relative to its container */
     z-index: 1; /* Ensure the card is above the background image */
-}
-
-.card-body {
-    padding: 20px;
-}
-
-.container {
-    position: relative; /* Ensure the container is positioned relative to its section */
-    z-index: 1; /* Ensure the container is above the background image */
-}
-.list-group{
-    background: none;
 }
