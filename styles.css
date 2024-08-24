@@ -73,6 +73,58 @@ body, html {
 }
 
 /* CARD */
+.board-box {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center; /* Center the board horizontally */
+    align-items: center; /* Center the board vertically */
+    padding: 20px; /* Optional: Add some padding around the board-box */
+  }
+  
+  .board {
+    width: 60%; /* Adjust as needed */
+    padding: 20px; /* Padding inside the board */
+    background: rgba(255, 255, 255, 0.1); /* White with 30% opacity */
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    -webkit-backdrop-filter: blur(10px); /* For Safari */
+    border-radius: 10px; /* Optional: Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Subtle shadow */
+    text-align: left; /* Align content to the left */
+  }
+
+/* MORE */
+.more-btn{
+    background: none;
+    border: none;
+    border-bottom: 1px solid var(--fg);
+    color: var(--fg);
+    font-size: 1rem;
+    padding: 0;
+}
+.more-btn-withoutunderline {
+    border-bottom: none;
+
+}
+.more-btn-secondary{
+    background: none;
+    border: none;
+    border-bottom: 1px solid var(--fg);
+    color: var(--link);
+    font-size: 1rem;
+    padding: 0;
+}
+.more-collapse {
+    margin-top: 8px;
+}  
+
+
+
+
+
+
+
+
 .card {
     width: 80%; /* Adjusted width to 80% */
     max-width: 600px;
