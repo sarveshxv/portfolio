@@ -12,6 +12,12 @@ body, html {
     overflow-x: hidden; /* Prevent horizontal scrolling */
     font-family: "Century Gothic";
 }
+/* h1{
+    margin-bottom: 1rem;
+}
+h6{
+    margin-bottom: 0.5rem;
+} */
 
 .section {
     min-height: 100vh;
@@ -28,11 +34,18 @@ body, html {
     font-size: 2em;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
-#section1 { background-image: url('static/boats.jpg'); }
+#section1 { 
+    background-image: url('static/boats.jpg'); 
+    padding: 30vh 0 20vh 0;
+}
 #section2 { background-image: url('static/laptop.jpg'); }
-#section3 { background-image: url('image3.jpg'); }
-#section4 { background-image: url('image4.jpg'); }
-#section5 { background-image: url('image5.jpg'); }
+#section3 { background-image: url('static/tools.jpg'); }
+#section4 { background-image: url('static/links.jpg'); }
+/* #section5 { background-image: url('image5.jpg'); } */
+
+#section2, #section3, #section4, #section5{
+    padding: 20vh 0;
+}
 
 /* BOTTONS */
 .btn{
@@ -79,12 +92,12 @@ body, html {
     display: flex;
     justify-content: center; /* Center the board horizontally */
     align-items: center; /* Center the board vertically */
-    padding: 20px; /* Optional: Add some padding around the board-box */
   }
   
   .board {
     width: 60%; /* Adjust as needed */
-    padding: 20px; /* Padding inside the board */
+    margin: 18px auto;
+    padding: 25px 0; /* Padding inside the board */
     background: rgba(255, 255, 255, 0.1); /* White with 30% opacity */
     backdrop-filter: blur(10px); /* Frosted glass effect */
     -webkit-backdrop-filter: blur(10px); /* For Safari */
@@ -92,7 +105,9 @@ body, html {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Subtle shadow */
     text-align: left; /* Align content to the left */
   }
-
+  .board-body{
+    padding: 20px;
+  }
 /* MORE */
 .more-btn{
     background: none;
@@ -114,27 +129,43 @@ body, html {
     font-size: 1rem;
     padding: 0;
 }
-.more-collapse {
-    margin-top: 8px;
-}  
+.more-collapse h6{
+    margin-top: 18px;
+} 
+br{
+    line-height: 100px;
+}
+.details-redir {
+    margin: 1rem 0;
+    color: var(--link);
+    text-decoration: none;
+}
 
 
 
 
 
+/* SKILLS */
+.divider-bottom {
+    border-bottom: 1px solid var(--fg);
+    line-height: 150%;
+    margin: 0.8rem 0;
+    padding-bottom: 0.8rem;
+}
+.divider-bottom .custom-b {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+.certs h6 {
+    margin-bottom: 20px;
+}
 
 
-
-.card {
-    width: 80%; /* Adjusted width to 80% */
-    max-width: 600px;
-    margin: 25px auto;
-    padding: 25px 0;
-    border-radius: 10px;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    position: relative; /* Ensure the card is positioned relative to its container */
-    z-index: 1; /* Ensure the card is above the background image */
+@media only screen and (max-width: 600px){
+    .board-box{
+        width: 100%;
+    }
+    .board{
+        width: 90vw;
+    }
 }
