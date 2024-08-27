@@ -87,7 +87,8 @@ h6{
 
 /* CARD */
 .board-box {
-    width: 100%;
+    width: 100vw;
+    border: 2px solid rgba(255, 255, 255, 0.01);
     height: auto;
     display: flex;
     justify-content: center; /* Center the board horizontally */
@@ -95,7 +96,7 @@ h6{
   }
   
   .board {
-    width: 60%; /* Adjust as needed */
+    width: 60vw; /* Adjust as needed */
     margin: 18px auto;
     padding: 25px 0; /* Padding inside the board */
     background: rgba(255, 255, 255, 0.1); /* White with 30% opacity */
@@ -163,7 +164,7 @@ br{
 
 @media only screen and (max-width: 600px){
     .board-box{
-        width: 100%;
+        width: 100vw;
     }
     .board{
         width: 90vw;
