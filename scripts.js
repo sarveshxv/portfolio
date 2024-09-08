@@ -1,22 +1,35 @@
-// document.querySelectorAll('.toggle-btn').forEach(button => {
-//     button.addEventListener('click', () => {
-//         const moreBoard = button.parentElement;
-//         const content = moreBoard.querySelector('.content');
+const scriptURL = 'https://script.google.com/macros/s/AKfycbxjL9JRLLbiTyERlP8DI49yuaLUUcTGceuJtBWREv17Yc5mOy0K3tjWRMAHB3q4Sy0/exec'
+const form = document.forms['submit-to-google-sheet'];
+const feedbackConfirmation = document.getElementById("feedbackConfirmation");
+const submitBtn = document.getElementById("submitBtn");
+const textarea = form.querySelector('textarea[name="Message"]');
 
-//         button.style.opacity = '1'; // Start fading out
+textarea.addEventListener('input', function() {
+  this.style.height = 'auto'; // Reset height to auto
+  this.style.height = (this.scrollHeight) + 'px'; // Set height to scrollHeight
+});
 
-//         setTimeout(() => {
-//             if (moreBoard.classList.contains('show')) {
-//                 content.style.maxHeight = '0';
-//                 button.textContent = 'Show More';
-//             } else {
-//                 content.style.maxHeight = content.scrollHeight + 'px';
-//                 button.textContent = 'Hide';
-//             }
+form.addEventListener('submit', e => {
+  e.preventDefault();
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Submitting...';
 
-//             button.style.opacity = '1'; // Fade back in
-//         }, 300); // Match the duration of the CSS transition
-       
-//         moreBoard.classList.toggle('show');
-//     });
-// });
+  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+    .then(response => {
+      feedbackConfirmation.innerHTML = "Thanks for the Feedback";
+      feedbackConfirmation.style.display = 'block';
+      setTimeout(function(){
+        feedbackConfirmation.style.display = 'none';
+      }, 5000);
+      form.reset();
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Submit';
+    })
+    .catch(error => {
+      console.error('Error!', error.message);
+      feedbackConfirmation.innerHTML = "Submission failed. Please try again.";
+      feedbackConfirmation.style.display = 'block';
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Submit';
+    });
+});
