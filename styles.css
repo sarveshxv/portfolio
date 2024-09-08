@@ -35,11 +35,16 @@ h6{
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     transition: background-size 0.3s ease-in-out;
     min-height: -webkit-fill-available;
+    z-index: 0;
 }
 #section1 { 
-    background-image: url('static/boats.jpg'); 
+    background-image: url('static/portrait.jpg'); 
     padding: 30vh 0 20vh 0;
 }
+.img-board{
+    background-image: url('static/acidgree-gelly.jpg');
+}
+#section-about{ background-image: url('static/acidgree-gelly.jpg');}
 #section2 { background-image: url('static/laptop.jpg'); }
 #section3 { background-image: url('static/tools.jpg'); }
 #section4 { background-image: url('static/links.jpg'); }
@@ -96,7 +101,7 @@ h6{
     justify-content: center; /* Center the board horizontally */
     align-items: center; /* Center the board vertically */
   }
-  
+
   .board {
     width: 60vw; /* Adjust as needed */
     margin: 18px auto;
@@ -107,6 +112,17 @@ h6{
     border-radius: 10px; /* Optional: Rounded corners */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Subtle shadow */
     text-align: left; /* Align content to the left */
+  }
+  #section1 .board{
+    background: none;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none; /* For Safari */
+    border: none;
+    box-shadow: none;
+
+  }
+  #section-about  .board {
+    padding: 0; /* Padding inside the board */
   }
   .board-body{
     padding: 20px;
