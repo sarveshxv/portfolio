@@ -36,6 +36,9 @@
                     <li class="nav-item">
                       <a class="nav-link active" href="#section4">Connect</a>
                     </li>
+                    <li class="nav-item">
+                      <a class="nav-link active" href="#FeebBackForm">Feedback</a>
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -120,11 +123,11 @@
                       My role bridges the gap between complex data landscapes and actionable insights, fostering 
                       transparent communication and operational excellence.                    
                       
-                      <div class="details-redir">
+                      <!-- <div class="details-redir">
                         <a class="details-redir" href="aboutme.html">
-                          View in deatil about my work. &#10159;
+                          View in deatil about my work. 📃;
                         </a>
-                      </div>
+                      </div> -->
                     </h5>
                   </div>
               </div>
@@ -410,13 +413,13 @@
       </div>
 
       <!-- NEW CARD -->
-      <div class="board-box">
+      <div class="board-box" id="FeebBackForm">
         <div class="board">
           <div class="board-body">
             <h4 class="text-center">Feedback</h4>
             <form name="submit-to-google-sheet">
-              <input name="Name" type="text" placeholder="Name">
-              <input name="Email" type="email" placeholder="Email">
+              <input name="Name" type="text" placeholder="Name / Anonymous">
+              <input name="Email" type="email" placeholder="Email / Anonymous">
               <textarea name="Message" rows="6" placeholder="Message" required></textarea>
               <button type="submit" id="submitBtn">Submit</button>
               <span id="feedbackConfirmation"></span>
