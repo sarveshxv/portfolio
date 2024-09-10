@@ -24,6 +24,9 @@ h5{
     border-bottom: 1px solid var(--fg);
     padding: 12px 0;
 }
+h5.noborder-h5{
+    border-bottom: none;
+}
 p{
     font-size: 2.6rem;
 }
@@ -47,7 +50,7 @@ p{
     z-index: 0;
 }
 #section1 { 
-    background-image: url('static/1.jpg'); 
+    background-image: url('static/1.jpg');
     padding: 24vh 0 20vh 0;
 }
 .img-board{
@@ -58,9 +61,15 @@ p{
 #section2 { background-image: url('static/2.jpg'); }
 #section3 { background-image: url('static/3.jpg'); }
 #section4 { background-image: url('static/6.jpg'); }
-/* #section5 { background-image: url('image5.jpg'); } */
+#jobsecinfy { background-image: url('static/professional-work/7.jpg'); }
+#jobsecfisv { background-image: url('static/professional-work/8.jpg'); }
+#jobseccureya { background-image: url('static/professional-work/9.jpg'); }
+#jobfooter { 
+    background-image: url('static/professional-work/10.jpg');
+    align-items: self-start; 
+}
 
-#section2, #section3, #section4, #section5, #section-about, #section-certs{
+#section2, #section3, #section4, #jobsecinfy, #jobsecfisv, #jobseccureya, #section-about, #section-certs{
     padding: 20vh 0;
     padding-bottom: 20vh;
 }
@@ -161,7 +170,22 @@ p{
 }
 .more-btn-withoutunderline {
     border-bottom: none;
-
+    border: 1px solid var(--fg);
+    margin: 20px 0;
+    font-size: 1.3rem;
+    width: auto;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.1); /* White with 30% opacity */
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    -webkit-backdrop-filter: blur(10px); /* For Safari */
+    padding: 10PX;
+    text-align: left;
+}
+#jobfooter .more-btn-withoutunderline{
+    max-width: 50%;
+}
+.more-btn-withoutunderline:hover{
+    background: rgba(255, 255, 255, 0.1); /* White with 30% opacity */
 }
 .more-btn-secondary{
     background: none;
@@ -179,9 +203,15 @@ br{
 }
 .details-redir {
     margin: 1rem 0;
-    color: var(--link);
+    color: var(--fg);
     text-decoration: none;
+    /* border: 1px solid var(--fg); */
+    width: auto;
 }
+.details-redir:hover{
+    color: var(--fg);
+}
+
 
 
 
@@ -310,5 +340,8 @@ form {
     }
     .board{
         width: 90vw;
+    }
+    #jobfooter .more-btn-withoutunderline{
+        max-width: 100%;
     }
 }
