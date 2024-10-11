@@ -3,7 +3,14 @@
     --bgrgb: rgba(22, 47, 44, 1);
     --fg: #fff;
     --link: #ffffffaa;
-    font-family: "Century Gothic";
+    /* font-family: "Century Gothic"; */
+    --fnormal: normal;
+    
+    --heading_font-family: 'Poppins', sans-serif;
+    --heading_font-weight: 400;
+
+    --subtitle_font-family: 'Poppins', sans-serif;
+    --subtitle_font-weight: 300;
 }
 
 body, html {
@@ -11,7 +18,9 @@ body, html {
     padding: 0;
     height: 100%;
     overflow-x: hidden; /* Prevent horizontal scrolling */
-    font-family: "Century Gothic";
+    font-family: var(--heading_font-family);
+    font-weight: var(--heading_font-weight);
+    font-style: var(--fnormal);
 }
 h1{
     margin-bottom: 1rem;
@@ -19,6 +28,9 @@ h1{
 h5{
     margin-bottom: 0.4em;
     margin-top: 0.6rem;
+    font-family: var(--subtitle_font-family);
+    /* font-weight: var(--subtitle_font-weight); */
+    font-style: var(--fnormal);
 }
 .border-h5 h5{
     border-bottom: 1px solid var(--fg);
@@ -29,6 +41,9 @@ h5.noborder-h5{
 }
 p{
     font-size: 2.6rem;
+    font-family: var(--heading_font-family);
+    font-weight: var(--heading_font-weight);
+    font-style: var(--fnormal);
 }
 
 .section {
