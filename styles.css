@@ -12,7 +12,26 @@
     --subtitle_font-family: 'Poppins', sans-serif;
     --subtitle_font-weight: 300;
 }
+.holinktl {
+    display: inline-block;
+    transition: transform 0.3s ease; /* Smooth transition */
+    transform-origin: top left;
+  }
 
+.holinkbl {
+    display: inline-block;
+    transition: transform 0.3s ease; /* Smooth transition */
+    transform-origin: bottom left;
+  }
+.holinkb {
+    display: inline-block;
+    transition: transform 0.3s ease; /* Smooth transition */
+    transform-origin: bottom;
+}
+
+.holinkbl:hover, .holinkb:hover, .holinktl:hover {
+    transform: scale(1.1); /* Zoom effect */
+}
 body, html {
     margin: 0;
     padding: 0;
@@ -128,6 +147,11 @@ p{
 
 .navbar-brand {
     color: var(--fg);
+}
+.nav-div{
+    border-bottom: 1px solid var(--fg);
+    padding-bottom: 4px;
+    margin-bottom: 4px;
 }
 
 .offcanvas {
